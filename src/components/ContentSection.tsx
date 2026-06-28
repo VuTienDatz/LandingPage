@@ -107,7 +107,7 @@ export default function ContentSection() {
               <span className={styles.categoryIcon}>✉</span>
               Liên hệ Thư ký Hội thảo
             </div>
-            <div style={{fontSize: '1.05rem', width: '100%', color: '#000', textAlign: 'center', lineHeight: '1.6'}}>
+            <div style={{fontSize: '0.9rem', width: '100%', color: '#000', textAlign: 'center', lineHeight: '1.6'}}>
               <p><strong>TS. Nguyễn Huy Trung</strong></p>
               <p>Email: <a href="mailto:trungnh@ptit.edu.vn" style={{color: 'var(--ptit-red)'}}>trungnh@ptit.edu.vn</a></p>
             </div>

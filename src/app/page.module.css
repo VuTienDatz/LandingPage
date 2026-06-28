@@ -179,11 +179,11 @@
 }
 
 .topContainer {
-  max-width: 1400px; /* Increased from 1200px to make content wider */
+  max-width: 1100px; /* Reduced from 1400px to make overall section smaller */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.2fr; /* Give more width to countdown column! */
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1.2fr; /* Restored column ratio */
+  gap: 2rem; /* Reduced gap */
   width: 100%;
 }
 
@@ -196,10 +196,10 @@
 
 .countdownTitle {
   color: var(--ptit-dark);
-  font-size: 1.5rem; /* Increased from 1.1rem */
+  font-size: 1rem; /* Proportional size */
   font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   width: 100%;
   text-align: center;
@@ -230,19 +230,20 @@
 .countNumber {
   background-color: #fff;
   color: var(--ptit-dark);
-  font-size: 2rem;
+  font-size: 2.2rem; /* Increased size as requested */
   font-weight: bold;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .countLabel {
   background-color: var(--ptit-dark);
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 0.7rem; /* Readable but won't wrap */
   text-align: center;
-  padding: 0.25rem 0;
+  padding: 0.3rem 0;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* PTIT Red for Days */
@@ -409,10 +410,9 @@
   color: var(--ptit-red);
 }
 
-/* Main Content Section (White) */
 .contentSection {
   background-color: var(--primary-bg);
-  padding: 3rem 2rem;
+  padding: 4rem 12rem; /* Massively increased horizontal padding to indent further */
   width: 100%;
 }
 
@@ -528,28 +528,7 @@
   text-align: center;
 }
 
-.countNumber {
-  font-size: 2.8rem; /* Restore to larger size since container is wider */
-  font-weight: 800;
-  color: var(--ptit-dark);
-  background-color: #ffffff;
-  padding: 1.2rem 0; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.countLabel {
-  font-size: 1rem; /* Restore to normal readable size */
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: var(--ptit-dark);
-  padding: 0.6rem;
-  text-align: center;
-  letter-spacing: 0.5px;
-}
+/* Removed duplicate countNumber and countLabel rules */
 
 /* 2-Column Text Layout for Main Content */
 .twoColumnText {
@@ -564,7 +543,7 @@
 }
 
 .committeeSection h3 {
-  font-size: 1.3rem; /* Increased from 1.15rem */
+  font-size: 1.05rem; /* Further reduced from 1.15rem */
   color: #000;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -572,7 +551,7 @@
 }
 
 .committeeSection p {
-  font-size: 1.15rem; /* Increased from 1.05rem */
+  font-size: 0.95rem; /* Further reduced from 1.05rem */
   margin-bottom: 0.8rem;
   line-height: 1.6;
   color: #000;
@@ -588,7 +567,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1.4rem; /* Massively increased to stand out */
+  font-size: 1.1rem; /* Further reduced from 1.2rem */
   color: #000;
   font-weight: 400; /* Removed bold styling */
   text-transform: uppercase;
@@ -606,7 +585,7 @@
   background-color: #0ea5e9;
   color: white;
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: 1.5rem; /* Increased size to make icons bigger */
 }
 
 .categoryLogos {
@@ -631,7 +610,7 @@
 }
 
 .logoText {
-  font-size: 0.9rem; /* Slightly larger */
+  font-size: 0.85rem; /* Further reduced */
   color: #000;
   max-width: 180px;
   font-weight: 800; /* Made bold as requested */
@@ -664,7 +643,7 @@
 
 .article p {
   margin-bottom: 1.5rem;
-  font-size: 1.15rem; /* Increased size for readability */
+  font-size: 0.95rem; /* Further reduced size */
   line-height: 1.8;
   color: #000;
 }
@@ -726,10 +705,65 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+  .contentContainer {
+    grid-template-columns: 1fr; /* Switch to 1 column */
+  }
   .contentSection {
-    grid-template-columns: 1fr;
+    padding: 3rem 4rem; /* Reduce padding on tablet */
   }
   .footerContainer {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
   }
+}
+
+@media (max-width: 768px) {
+  .topSection {
+    padding: 2rem 1.5rem;
+  }
+  .contentSection {
+    padding: 2rem 1.5rem; /* Drastically reduce padding on mobile */
+  }
+  .countdownTitle {
+    font-size: 0.9rem;
+  }
+  .countNumber {
+    font-size: 1.6rem;
+  }
+  .countLabel {
+    font-size: 0.65rem;
+  }
+  .dateRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .datePill {
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+  .footerTitle {
+    font-size: 1.5rem;
+  }
+}
+
+.footerLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footerLink:hover {
+  color: #38bdf8; /* Soft blue on hover */
+  text-decoration: underline;
 }

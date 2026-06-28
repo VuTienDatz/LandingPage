@@ -7,23 +7,22 @@
 .hero {
   position: relative;
   display: flex;
-  min-height: 450px;
+  min-height: 100vh; /* Make the hero fit the viewport height perfectly */
   background-color: #ffffff; /* Base white for the right side */
   overflow: hidden;
 }
 
-/* The fog overlay: placed over the right edge of the image to fade it to white */
+/* The fog overlay spanning the whole screen to control blur and fade */
 .heroOverlay {
   position: absolute;
   top: 0;
-  left: 30%; /* Start the fade earlier for a smoother transition */
-  width: 30%; /* Covers from 30% to 60% */
+  left: 0; 
+  width: 100%; 
   bottom: 0;
-  /* Fades from transparent to a soft icy blue, then to pure white */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(200, 230, 255, 0.6) 50%, rgba(255, 255, 255, 1) 100%);
-  backdrop-filter: blur(15px); /* Stronger blur for a better fog effect */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 15%, rgba(200, 230, 255, 0.7) 45%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 15%, black 45%);
+  mask-image: linear-gradient(to right, transparent 0%, transparent 15%, black 45%);
   z-index: 2;
 }
 
@@ -43,7 +42,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 60%; /* Image stops exactly where the fog becomes solid white */
+  width: 100%; /* Image spans the full width to prevent severe cropping */
   background-image: url('/bg.jpg');
   background-size: cover;
   background-position: center; /* Center to show the whole image evenly */
@@ -52,7 +51,7 @@
 
 .heroRight {
   width: auto; /* Let it expand naturally */
-  min-width: 650px; /* Prevent wrapping of the red block */
+  min-width: 650px; /* Desktop width */
   max-width: 800px;
   margin-left: auto; /* Force it to the absolute right edge */
   padding: 4rem 0 4rem 2rem; /* Remove right padding so it touches the right bound */
@@ -96,7 +95,7 @@
   display: inline-block;
   padding: 0.8rem 2.5rem;
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: 700; /* Reduced from 900 */
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
   align-self: center; /* Center it */
@@ -105,7 +104,7 @@
 .subTitle {
   color: var(--ptit-red);
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700; /* Increased for bolder text */
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -113,10 +112,9 @@
 
 .mainTitle {
   color: var(--ptit-dark);
-  font-size: 1.7rem;
-  font-weight: 800;
-  font-style: italic;
-  line-height: 1.4;
+  font-size: 1.6rem;
+  font-weight: 700; /* Increased for bolder text */
+  line-height: 1.5;
   margin-bottom: 2.5rem;
   max-width: 650px;
 }
@@ -160,21 +158,30 @@
 @media (max-width: 1100px) {
   .heroContent {
     flex-direction: column;
+    justify-content: center; /* Fixes the massive top gap by centering content */
+    padding-right: 0;
   }
   .heroOverlay {
     width: 100%;
     clip-path: none;
     mask-image: none;
     -webkit-mask-image: none;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.45); /* Lowered opacity to reveal background image clearly */
+    backdrop-filter: blur(4px); /* Lowered blur to keep the background sharp */
   }
   .heroLeft {
-    display: none;
+    /* Kept visible on mobile, acts as background */
+    width: 100%;
+    background-position: left center; /* Focus on the building on the left */
   }
   .heroRight {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0; /* Fixes off-center issues */
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 2rem;
+    z-index: 3;
   }
   .sponsorsWrapper, .redBlock {
     align-self: center;
@@ -182,5 +189,28 @@
   }
   .heroButtons {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .redBlock {
+    font-size: 1.8rem; /* Correct class name and size */
+    padding: 0.6rem 1.5rem;
+  }
+  .subTitle {
+    font-size: 1.2rem;
+  }
+  .mainTitle {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+  .heroButtons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .heroRight {
+    min-width: 0; /* Fixes the massive bug causing mobile overflow */
+    padding: 2rem 1rem;
   }
 }
