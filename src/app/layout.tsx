@@ -13,8 +13,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "IEEE ICCE 2026 | PTIT",
-  description: "11th IEEE International Conference on Communications and Electronics (ICCE 2026)",
+  title: "Hội thảo Khoa học Quốc gia",
+  description: "Hội thảo Khoa học Quốc gia AI & Điện tử Viễn thông (AI4TELECOM 2026)",
+  icons: {
+    icon: '/ptit.png',
+  },
 };
 
 export default function RootLayout({
