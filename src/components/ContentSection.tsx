@@ -110,7 +110,7 @@ export default function ContentSection() {
             </div>
             <div style={{fontSize: '0.9rem', width: '100%', color: '#000', textAlign: 'center', lineHeight: '1.6'}}>
               <p><strong>TS. Nguyễn Huy Trung</strong></p>
-              <p>Email: <a href="mailto:trungnh@ptit.edu.vn" style={{color: 'var(--ptit-red)'}}>trungnh@ptit.edu.vn</a></p>
+              <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=trungnh@ptit.edu.vn" target="_blank" rel="noopener noreferrer" style={{color: '#2563eb', textDecoration: 'none'}}>trungnh@ptit.edu.vn</a></p>
             </div>
           </div>
 

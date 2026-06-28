@@ -92,7 +92,7 @@ export default function InfoSection() {
             <p className={styles.cardHeader}>SUBMISSION</p>
             <p className={styles.cardText}>
               Gửi bài thông qua địa chỉ Email:<br/>
-              <strong>ript@ptit.edu.vn</strong><br/>
+              <strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ript@ptit.edu.vn" target="_blank" rel="noopener noreferrer" style={{color: '#2563eb', textDecoration: 'none'}}>ript@ptit.edu.vn</a></strong><br/>
               trước ngày <span className={styles.highlight}>31/08/2026</span>
             </p>
           </div>
