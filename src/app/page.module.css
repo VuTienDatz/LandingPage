@@ -433,14 +433,18 @@
 
 .article p {
   margin-bottom: 1rem;
+  text-align: justify; /* Căn lề đều hai bên cho chuyên nghiệp */
 }
 
 .sectionTitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #000;
   text-transform: uppercase;
-  margin: 2rem 0 1rem;
+  margin: 2.5rem 0 1rem;
   font-weight: bold;
+  border-bottom: 2px solid var(--ptit-red); /* Added red line for consistency */
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .topicGroup {
@@ -580,12 +584,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
-  background-color: #0ea5e9;
+  width: 40px;
+  height: 40px;
+  background-color: #0ea5e9; /* Keep the nice blue */
   color: white;
   border-radius: 50%;
-  font-size: 1.5rem; /* Increased size to make icons bigger */
+  flex-shrink: 0; /* Prevent the circle from being squished */
 }
 
 .categoryLogos {

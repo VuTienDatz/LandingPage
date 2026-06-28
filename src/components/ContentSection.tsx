@@ -1,4 +1,5 @@
 import React from 'react';
+import { Building2, Mail } from 'lucide-react';
 import styles from '../app/page.module.css';
 
 export default function ContentSection() {
@@ -17,7 +18,7 @@ export default function ContentSection() {
             Hội thảo là diễn đàn để các nhà quản lý, kỹ sư, chuyên gia, nhà nghiên cứu trong lĩnh vực điện tử viễn thông và trí tuệ nhân tạo cùng nhau trao đổi, thảo luận về những vấn đề cốt lõi.
           </p>
 
-          <h2 style={{ fontSize: '1.2rem', color: '#000', marginTop: '2.5rem', marginBottom: '1rem', textTransform: 'uppercase', paddingBottom: '0.5rem', display: 'inline-block' }}>
+          <h2 className={styles.sectionTitle}>
             CƠ CẤU TỔ CHỨC
           </h2>
 
@@ -75,7 +76,7 @@ export default function ContentSection() {
           
           <div className={styles.sponsorCategory}>
             <div className={styles.categoryTitle}>
-              <span className={styles.categoryIcon}>🏢</span>
+              <span className={styles.categoryIcon}><Building2 size={24} /></span>
               Đơn Vị Tổ Chức & Phối Hợp
             </div>
             <div className={styles.categoryLogos}>
@@ -104,7 +105,7 @@ export default function ContentSection() {
 
           <div className={styles.sponsorCategory}>
             <div className={styles.categoryTitle}>
-              <span className={styles.categoryIcon}>✉</span>
+              <span className={styles.categoryIcon}><Mail size={24} /></span>
               Liên hệ Thư ký Hội thảo
             </div>
             <div style={{fontSize: '0.9rem', width: '100%', color: '#000', textAlign: 'center', lineHeight: '1.6'}}>
