@@ -768,17 +768,15 @@
 
 .footerLink {
   color: #ffffff; /* Pure white */
-  text-decoration: none; 
-  background-image: linear-gradient(to right, #ffffff, #ffffff);
-  background-size: 0% 2px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: background-size 0.3s ease, color 0.3s ease;
+  text-decoration: underline; 
+  text-decoration-color: transparent; /* Invisible underline initially */
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.3s ease, color 0.3s ease;
   font-weight: 500;
-  padding-bottom: 2px;
 }
 
 .footerLink:hover {
   color: #ffffff; /* White on hover */
-  background-size: 100% 2px; /* Underline expands on hover */
+  text-decoration-color: #ffffff; /* Underline fades in on hover */
 }
