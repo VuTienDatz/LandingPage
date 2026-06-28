@@ -624,7 +624,7 @@
 
 /* Footer Section */
 .footer {
-  background-color: #1e2229; /* Dark slate background matching image */
+  background-color: #9f1313; /* Deep red matching image */
   background-image: url('/continents.svg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -634,11 +634,10 @@
   margin-top: auto;
   width: 100%;
   position: relative;
-  /* Removed red border top */
 }
 
 .footerContainer {
-  max-width: 1400px; /* Increased from 1200px */
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -662,7 +661,7 @@
 
 .footerSubtitle {
   font-size: 0.85rem;
-  color: #ef4444; /* Bright red */
+  color: #bae6fd; /* Soft, gentle sky blue for contrast */
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -671,10 +670,9 @@
 .footerText {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: #cbd5e1; /* Light gray text for dark theme */
+  color: #f8fafc; /* Very bright white/gray */
   margin-bottom: 0.5rem;
 }
-
 
 .contactTitle {
   font-size: 1.5rem;
@@ -683,14 +681,20 @@
 }
 
 .footerCopyright {
-  max-width: 1400px; /* Increased from 1200px */
+  max-width: 1400px;
   margin: 3rem auto 0;
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.7); /* Slightly dimmed white */
 }
 
 .footerCopyright a {
-  color: var(--ptit-red);
+  color: #ffffff; /* Bright white */
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.footerCopyright a:hover {
+  opacity: 0.8;
 }
 
 /* Responsive */
@@ -763,12 +767,18 @@
 }
 
 .footerLink {
-  color: #e2e8f0;
-  text-decoration: none;
-  transition: all 0.2s ease;
+  color: #ffffff; /* Pure white */
+  text-decoration: none; 
+  background-image: linear-gradient(to right, #ffffff, #ffffff);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  padding-bottom: 2px;
 }
 
 .footerLink:hover {
-  color: #38bdf8; /* Soft blue on hover */
-  text-decoration: underline;
+  color: #ffffff; /* White on hover */
+  background-size: 100% 2px; /* Underline expands on hover */
 }

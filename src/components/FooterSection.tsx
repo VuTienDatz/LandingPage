@@ -13,10 +13,11 @@ export default function FooterSection() {
         </div>
         <div>
           <h2 className={styles.contactTitle}>THÔNG TIN LIÊN HỆ</h2>
-          <p className={styles.footerText}><strong>Trụ sở chính:</strong> <a href="https://maps.google.com/?q=122+đường+Hoàng+Quốc+Việt+Nghĩa+Tân+Cầu+Giấy+Hà+Nội" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>122 đường Hoàng Quốc Việt – phường Nghĩa Tân – quận Cầu Giấy – TP. Hà Nội</a></p>
-          <p className={styles.footerText}><strong>Cơ sở II:</strong> <a href="https://maps.google.com/?q=Số+271/10+An+Dương+Vương+Phường+3+Quận+5+Thành+phố+Hồ+Chí+Minh" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Số 271/10, An Dương Vương – Phường 3 – Quận 5 – Thành phố Hồ Chí Minh.</a></p>
-          <p className={styles.footerText}><strong>Điện thoại:</strong> <a href="tel:02437561261" className={styles.footerLink}>02437561261</a></p>
-          <p className={styles.footerText}><strong>Gmail:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@ript.com" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>contact@ript.com</a></p>
+          <p className={styles.footerText}><strong>Trụ sở chính:</strong> <a href="https://maps.google.com/?q=Số+122+Hoàng+Quốc+Việt+phường+Nghĩa+Đô+thành+phố+Hà+Nội" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Số 122 Hoàng Quốc Việt, phường Nghĩa Đô, thành phố Hà Nội</a></p>
+          <p className={styles.footerText}><strong>Cơ sở đào tạo tại Hà Nội:</strong> <a href="https://maps.google.com/?q=Số+96A+Trần+Phú+phường+Hà+Đông+thành+phố+Hà+Nội" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Số 96A Trần Phú, phường Hà Đông, thành phố Hà Nội.</a></p>
+          <p className={styles.footerText}><strong>Học viện cơ sở tại TP. Hồ Chí Minh:</strong> <a href="https://maps.google.com/?q=Số+11+Nguyễn+Đình+Chiểu+phường+Sài+Gòn+Thành+phố+Hồ+Chí+Minh" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Số 11 Nguyễn Đình Chiểu, phường Sài Gòn, Thành phố Hồ Chí Minh.</a></p>
+          <p className={styles.footerText}><strong>Cơ sở đào tạo tại TP Hồ Chí Minh:</strong> <a href="https://maps.google.com/?q=Số+97+Man+Thiện+phường+Tăng+Nhơn+Phú+thành+phố+Hồ+Chí+Minh" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Số 97 Man Thiện, phường Tăng Nhơn Phú, thành phố Hồ Chí Minh.</a></p>
+          <p className={styles.footerText}><strong>Email:</strong> <a href="mailto:ript@ptit.edu.vn" className={styles.footerLink}>ript@ptit.edu.vn</a></p>
         </div>
       </div>
       <div className={styles.footerCopyright}>
