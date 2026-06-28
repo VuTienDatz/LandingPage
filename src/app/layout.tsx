@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI4TELECOM 2026 - Hội thảo Khoa học Quốc gia",
     description: "Hội thảo Khoa học Quốc gia AI & Điện tử Viễn thông (AI4TELECOM 2026): Cơ hội, thách thức và hướng đi tương lai.",
-    url: "https://ai4telecom.vercel.app",
+    url: "https://aifortelecom.vercel.app",
     siteName: "AI4TELECOM 2026",
     images: [
       {
