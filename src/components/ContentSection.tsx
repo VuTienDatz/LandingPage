@@ -83,7 +83,7 @@ export default function ContentSection() {
                 <p><strong>PGS.TS. Đặng Hoài Bắc</strong><br/>Giám đốc Học viện - Đồng Trưởng ban</p>
                 <p><strong>Ông Trần Đức Lai</strong><br/>Chủ tịch Hội Vô tuyến Điện tử Việt Nam</p>
                 <p><strong>Ông Nguyễn Khắc Lịch</strong><br/>Cục trưởng Cục Công nghiệp Công nghệ Thông tin, Bộ Khoa học và Công nghệ</p>
-                <p><strong>Ông Nguyễn Thành Chung</strong><br/>Cục trưởng Cục Viễn thông, Bộ Khoa học và Công nghệ</p>
+                <p><strong>Ông Nguyễn Phong Nhã</strong><br/>Phó Cục trưởng Cục Viễn thông, Bộ Khoa học và Công nghệ</p>
                 <p><strong>GS.TS. Từ Minh Phương</strong><br/>Phó Giám đốc Học viện</p>
               </div>
 
