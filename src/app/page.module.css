@@ -720,6 +720,9 @@
   .contentSection {
     padding: 3rem 4rem; /* Reduce padding on tablet */
   }
+  .twoColumnText {
+    grid-template-columns: 1fr; /* Switch to 1 column for text lists on mobile/tablet */
+  }
   .footerContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
