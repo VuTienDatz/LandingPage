@@ -18,6 +18,62 @@ export default function ContentSection() {
             Hội thảo là diễn đàn để các nhà quản lý, kỹ sư, chuyên gia, nhà nghiên cứu trong lĩnh vực điện tử viễn thông và trí tuệ nhân tạo cùng nhau trao đổi, thảo luận về những vấn đề cốt lõi.
           </p>
 
+          <h2 className={styles.sectionTitle} style={{ marginTop: '2rem' }}>
+            THÔNG TIN CHUNG
+          </h2>
+
+          <div className={styles.twoColumnText}>
+            {/* Column 1 */}
+            <div>
+              <div className={styles.committeeSection}>
+                <h3>1. Mục đích, yêu cầu</h3>
+                <p>- Nhận diện và phân tích những cơ hội và thách thức mà AI mang lại cho ngành điện tử và viễn thông Việt Nam trong bối cảnh chuyển đổi số quốc gia.</p>
+                <p>- Chia sẻ kinh nghiệm, ý tưởng và mô hình ứng dụng AI thành công trong mạng 5G/6G, IoT, xử lý tín hiệu, bảo mật mạng và các dịch vụ viễn thông thế hệ mới.</p>
+                <p>- Đề xuất các giải pháp kỹ thuật, chính sách và định hướng chiến lược để tận dụng tối đa lợi ích của AI, đồng thời kiểm soát các rủi ro tiềm ẩn.</p>
+                <p>- Xây dựng lộ trình phát triển và hợp tác nghiên cứu giữa các tổ chức khoa học, doanh nghiệp viễn thông và cơ quan quản lý nhà nước.</p>
+              </div>
+
+              <div className={styles.committeeSection}>
+                <h3>2. Thời gian, địa điểm, hình thức tổ chức</h3>
+                <p>- <strong>Thời gian (dự kiến):</strong> 08:00 – 17:00, ngày 10/09/2026.</p>
+                <p>- <strong>Địa điểm:</strong> Viện Khoa học Kỹ thuật Bưu Điện, Học viện Công nghệ Bưu chính Viễn thông, 122 Hoàng Quốc Việt, Nghĩa Đô, Hà Nội.</p>
+                <p>- <strong>Hình thức tổ chức:</strong> Trực tiếp.</p>
+              </div>
+            </div>
+
+            {/* Column 2 */}
+            <div>
+              <div className={styles.committeeSection}>
+                <h3>3. Thành phần tham gia</h3>
+                <p><strong>3.1. Đại biểu mời</strong></p>
+                <p>- Đại diện lãnh đạo Bộ Khoa học và Công nghệ, Bộ Giáo dục và Đào tạo;</p>
+                <p>- Đại diện lãnh đạo Hội Vô tuyến Điện tử Việt Nam (REV), Hội Tin học Việt Nam (VAIP), FISU Việt Nam;</p>
+                <p>- Chuyên gia, nhà nghiên cứu trong lĩnh vực AI, điện tử và viễn thông;</p>
+                <p>- Đại diện các doanh nghiệp viễn thông và công nghệ (Viettel, VNPT, MobiFone, FPT, Nokia, Ericsson, Qualcomm, Huawei...);</p>
+                <p>- Đại biểu viết báo cáo khoa học và trình bày tham luận tại Hội thảo;</p>
+                <p>- Đại diện các trường đại học, viện nghiên cứu thuộc lĩnh vực CNTTTT;</p>
+                <p>- Nhà quản lý, hoạch định chính sách quan tâm đến AI trong viễn thông.</p>
+                <p><strong>3.2. Đơn vị tổ chức</strong></p>
+                <p>- Đơn vị chủ trì: Học viện Công nghệ Bưu chính Viễn thông (PTIT)</p>
+                <p>- Đơn vị phối hợp chuyên môn: Câu lạc bộ Khoa - Trường - Viện CNTT-TT Việt Nam (FISU Việt Nam)</p>
+                <p>- Đơn vị bảo trợ dự kiến: Bộ Khoa học và Công nghệ; Hội Vô tuyến Điện tử Việt Nam (REV); Hội Tin học Việt Nam (VAIP)</p>
+                <p><em>Tổng số đại biểu và khách mời dự kiến: khoảng 200 - 250 đại biểu.</em></p>
+              </div>
+
+              <div className={styles.committeeSection}>
+                <h3>4. Nội dung Hội thảo</h3>
+                <p><strong>4.1. Số lượng báo cáo/tham luận (dự kiến)</strong></p>
+                <p>- Tổng số: 40 bài viết</p>
+                <p>- Số báo cáo/tham luận trình bày trực tiếp dự kiến: 17 báo cáo, gồm các báo cáo keynote và báo cáo tại các phiên chuyên đề.</p>
+                <p>&nbsp;&nbsp;+ Số báo cáo trình bày phiên toàn thể: 05 báo cáo (Keynote);</p>
+                <p>&nbsp;&nbsp;+ Số báo cáo tại các phiên chuyên đề buổi sáng: 12 báo cáo, dự kiến 03 phiên, mỗi phiên 04 báo cáo;</p>
+                <p>&nbsp;&nbsp;+ Các báo cáo viên gửi tiêu đề, tóm tắt (abstract) và slide trình bày; bài full paper là tùy chọn, không xác định trước số lượng.</p>
+              </div>
+            </div>
+          </div>
+
+          <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0', margin: '3rem 0' }} />
+
           <h2 className={styles.sectionTitle}>
             BAN TỔ CHỨC
           </h2>

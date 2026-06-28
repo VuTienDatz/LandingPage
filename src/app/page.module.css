@@ -426,7 +426,7 @@
 }
 
 .article {
-  color: #333;
+  color: #000;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -554,11 +554,12 @@
   font-weight: bold;
 }
 
-.committeeSection p {
-  font-size: 0.95rem; /* Further reduced from 1.05rem */
-  margin-bottom: 0.8rem;
-  line-height: 1.6;
-  color: #000;
+.article .committeeSection p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6; /* Match standard article text */
+  color: #000; /* Use pure black */
+  text-align: justify; /* Match standard article text */
 }
 
 /* Sidebar Sponsor Categories */
