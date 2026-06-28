@@ -34,15 +34,25 @@ export default function ContentSection() {
               </div>
 
               <div className={styles.committeeSection}>
-                <h3>2. Thời gian, địa điểm, hình thức tổ chức</h3>
-                <p>- <strong>Thời gian (dự kiến):</strong> 08:00 – 17:00, ngày 10/09/2026.</p>
-                <p>- <strong>Địa điểm:</strong> Viện Khoa học Kỹ thuật Bưu Điện, Học viện Công nghệ Bưu chính Viễn thông, 122 Hoàng Quốc Việt, Nghĩa Đô, Hà Nội.</p>
-                <p>- <strong>Hình thức tổ chức:</strong> Trực tiếp.</p>
+                <h3>4. Nội dung Hội thảo</h3>
+                <p><strong>4.1. Số lượng báo cáo/tham luận (dự kiến)</strong></p>
+                <p>- Tổng số: 40 bài viết</p>
+                <p>- Số báo cáo/tham luận trình bày trực tiếp dự kiến: 17 báo cáo, gồm các báo cáo keynote và báo cáo tại các phiên chuyên đề.</p>
+                <p>&nbsp;&nbsp;+ Số báo cáo trình bày phiên toàn thể: 05 báo cáo (Keynote);</p>
+                <p>&nbsp;&nbsp;+ Số báo cáo tại các phiên chuyên đề buổi sáng: 12 báo cáo, dự kiến 03 phiên, mỗi phiên 04 báo cáo;</p>
+                <p>&nbsp;&nbsp;+ Các báo cáo viên gửi tiêu đề, tóm tắt (abstract) và slide trình bày; bài full paper là tùy chọn, không xác định trước số lượng.</p>
               </div>
             </div>
 
             {/* Column 2 */}
             <div>
+              <div className={styles.committeeSection}>
+                <h3>2. Thời gian, địa điểm, hình thức tổ chức</h3>
+                <p>- <strong>Thời gian (dự kiến):</strong> 08:00 – 17:00, ngày 10/09/2026.</p>
+                <p>- <strong>Địa điểm:</strong> Viện Khoa học Kỹ thuật Bưu Điện, Học viện Công nghệ Bưu chính Viễn thông, 122 Hoàng Quốc Việt, Nghĩa Đô, Hà Nội.</p>
+                <p>- <strong>Hình thức tổ chức:</strong> Trực tiếp.</p>
+              </div>
+
               <div className={styles.committeeSection}>
                 <h3>3. Thành phần tham gia</h3>
                 <p><strong>3.1. Đại biểu mời</strong></p>
@@ -58,70 +68,6 @@ export default function ContentSection() {
                 <p>- Đơn vị phối hợp chuyên môn: Câu lạc bộ Khoa - Trường - Viện CNTT-TT Việt Nam (FISU Việt Nam)</p>
                 <p>- Đơn vị bảo trợ dự kiến: Bộ Khoa học và Công nghệ; Hội Vô tuyến Điện tử Việt Nam (REV); Hội Tin học Việt Nam (VAIP)</p>
                 <p><em>Tổng số đại biểu và khách mời dự kiến: khoảng 200 - 250 đại biểu.</em></p>
-              </div>
-
-              <div className={styles.committeeSection}>
-                <h3>4. Nội dung Hội thảo</h3>
-                <p><strong>4.1. Số lượng báo cáo/tham luận (dự kiến)</strong></p>
-                <p>- Tổng số: 40 bài viết</p>
-                <p>- Số báo cáo/tham luận trình bày trực tiếp dự kiến: 17 báo cáo, gồm các báo cáo keynote và báo cáo tại các phiên chuyên đề.</p>
-                <p>&nbsp;&nbsp;+ Số báo cáo trình bày phiên toàn thể: 05 báo cáo (Keynote);</p>
-                <p>&nbsp;&nbsp;+ Số báo cáo tại các phiên chuyên đề buổi sáng: 12 báo cáo, dự kiến 03 phiên, mỗi phiên 04 báo cáo;</p>
-                <p>&nbsp;&nbsp;+ Các báo cáo viên gửi tiêu đề, tóm tắt (abstract) và slide trình bày; bài full paper là tùy chọn, không xác định trước số lượng.</p>
-              </div>
-            </div>
-          </div>
-
-          <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0', margin: '3rem 0' }} />
-
-          <h2 className={styles.sectionTitle}>
-            BAN TỔ CHỨC
-          </h2>
-
-          <div className={styles.twoColumnText}>
-            {/* Column 1 */}
-            <div>
-              <div className={styles.committeeSection}>
-                <h3>I. BAN CHỈ ĐẠO</h3>
-                <p><strong>GS.TS. Nguyễn Thanh Thủy</strong><br/>Chủ tịch FISU Việt Nam - Trưởng Ban</p>
-                <p><strong>PGS.TS. Đặng Hoài Bắc</strong><br/>Giám đốc Học viện - Đồng Trưởng ban</p>
-                <p><strong>Ông Trần Đức Lai</strong><br/>Chủ tịch Hội Vô tuyến Điện tử Việt Nam</p>
-                <p><strong>Ông Nguyễn Khắc Lịch</strong><br/>Cục trưởng Cục Công nghiệp Công nghệ Thông tin, Bộ Khoa học và Công nghệ</p>
-                <p><strong>Ông Nguyễn Thành Chung</strong><br/>Cục trưởng Cục Viễn thông, Bộ Khoa học và Công nghệ</p>
-                <p><strong>GS.TS. Từ Minh Phương</strong><br/>Phó Giám đốc Học viện</p>
-              </div>
-
-              <div className={styles.committeeSection}>
-                <h3>II. BAN TỔ CHỨC</h3>
-                <p><strong>TS. Nguyễn Trung Kiên</strong><br/>Phó Giám đốc Học viện - Trưởng Ban</p>
-                <p><strong>PGS.TS. Ngô Quốc Dũng (PTIT)</strong><br/>Phó trưởng Ban</p>
-                <p><strong>TS. Ngô Đức Thiện (PTIT)</strong><br/>Phó trưởng Ban</p>
-                <p><strong>TS. Đỗ Trung Anh (PTIT)</strong></p>
-              </div>
-            </div>
-
-            {/* Column 2 */}
-            <div>
-              <div className={styles.committeeSection}>
-                <h3>III. BAN CHƯƠNG TRÌNH</h3>
-                <p><strong>PGS.TS. Bùi Thu Lâm (FISU)</strong> - Trưởng Ban</p>
-                <p><strong>PGS.TS. Đặng Thế Ngọc (PTIT)</strong> - Đồng Trưởng ban</p>
-                <p><strong>GS.TS. Lê Sỹ Vinh (VNU)</strong></p>
-                <p><strong>PGS.TS. Nguyễn Việt Hùng (MTA)</strong></p>
-                <p><strong>PGS. TS. Nguyễn Hữu Quỳnh (CMCU)</strong></p>
-                <p><strong>PGS.TS. Nguyễn Long Giang (IOIT)</strong></p>
-                <p><strong>PGS. TS. Phạm Văn Cường (PTIT)</strong></p>
-                <p><strong>PGS.TS. Hoàng Trọng Minh (PTIT)</strong></p>
-                <p><strong>TS. Trần Tiến Công (PTIT)</strong></p>
-                <p><strong>TS. Nguyễn Trung Hiếu (PTIT)</strong></p>
-                <p><strong>PGS.TS. Ngô Quốc Dũng (PTIT)</strong></p>
-              </div>
-
-              <div className={styles.committeeSection}>
-                <h3>IV. BAN CHUYÊN MÔN</h3>
-                <p><strong>Tiểu ban 1:</strong> AI trong đào tạo điện tử viễn thông: Tác động và Ứng dụng</p>
-                <p><strong>Tiểu ban 2:</strong> AI trong thiết kế, vận hành và tối ưu hóa mạng viễn thông</p>
-                <p><strong>Tiểu ban 3:</strong> Bảo mật và an toàn mạng viễn thông trong thời đại AI</p>
               </div>
             </div>
           </div>
