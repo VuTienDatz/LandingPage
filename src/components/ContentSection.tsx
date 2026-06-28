@@ -115,9 +115,9 @@ export default function ContentSection() {
 
               <div className={styles.committeeSection}>
                 <h3>IV. BAN CHUYÊN MÔN</h3>
-                <p><strong>Tiểu ban 1:</strong> AI trong đào tạo điện tử viễn thông: Tác động và Ứng dụng</p>
-                <p><strong>Tiểu ban 2:</strong> AI trong thiết kế, vận hành và tối ưu hóa mạng viễn thông</p>
-                <p><strong>Tiểu ban 3:</strong> Bảo mật và an toàn mạng viễn thông trong thời đại AI</p>
+                <p><strong>Phiên hội thảo 1:</strong> AI trong đào tạo điện tử viễn thông: Tác động và Ứng dụng</p>
+                <p><strong>Phiên hội thảo 2:</strong> AI trong thiết kế, vận hành và tối ưu hóa mạng viễn thông</p>
+                <p><strong>Phiên hội thảo 3:</strong> Bảo mật và an toàn mạng viễn thông trong thời đại AI</p>
               </div>
             </div>
           </div>

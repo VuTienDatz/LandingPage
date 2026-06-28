@@ -13,6 +13,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ai4telecom.vercel.app"),
   title: "AI4TELECOM 2026 - Hội thảo Khoa học Quốc gia",
   description: "Hội thảo Khoa học Quốc gia AI & Điện tử Viễn thông (AI4TELECOM 2026). Ngày tổ chức: 10/09/2026 tại Hà Nội, Việt Nam.",
   icons: {
@@ -42,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${inter.variable} ${montserrat.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
