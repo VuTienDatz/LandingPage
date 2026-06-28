@@ -1,0 +1,49 @@
+.header {
+  background-color: var(--ptit-dark);
+  color: #fff;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.archived {
+  text-align: right;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+}
+
+.archived a {
+  color: #f8fafc;
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.archived a:hover {
+  color: var(--accent-gold);
+}
+
+.nav {
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.navLink {
+  color: #fff;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.navLink:hover {
+  background-color: var(--ptit-red-dark);
+}
+
+.navLink.active {
+  background-color: var(--ptit-red-dark);
+  font-weight: bold;
+}

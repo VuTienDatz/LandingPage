@@ -1,0 +1,166 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 400px;
+  background-color: var(--ptit-dark);
+  overflow: hidden;
+}
+
+.heroLeft {
+  flex: 0 0 40%;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+}
+
+.heroLeftLogo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--ptit-red);
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.yearText {
+  display: block;
+  font-size: 0.8rem;
+  color: #000;
+  line-height: 1.2;
+}
+
+.anniversaryText {
+  display: block;
+  font-size: 0.8rem;
+  color: #000;
+  line-height: 1.2;
+}
+
+.ieeeText {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  color: var(--ptit-red);
+}
+
+.curveSvg {
+  position: absolute;
+  left: 38%;
+  top: 0;
+  height: 100%;
+  width: auto;
+  z-index: 2;
+  filter: drop-shadow(-5px 0 15px rgba(0,0,0,0.5));
+}
+
+.heroRight {
+  flex: 1;
+  position: relative;
+  background-color: var(--ptit-dark);
+  background-image: radial-gradient(circle at center, var(--ptit-dark-light) 0%, var(--ptit-dark) 100%);
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.heroRightLogo {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoNumber {
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.logoTextCol {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+  text-align: left;
+  line-height: 1;
+}
+
+.logoYears {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.logoHust {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Removed gradient from the main text */
+.heroTitleSolid {
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 800;
+  color: var(--ptit-red); /* Solid PTIT red */
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.heroTitleMain {
+  font-size: 2.2rem;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+/* Make buttons slightly overlap or close to each other */
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.heroPill {
+  background: var(--ptit-red);
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+}
+
+.heroPill:hover {
+  background: var(--ptit-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6);
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    flex-direction: column;
+  }
+  .heroLeft {
+    height: 300px;
+  }
+  .curveSvg {
+    display: none;
+  }
+}
