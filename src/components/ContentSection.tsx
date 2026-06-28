@@ -80,17 +80,17 @@ export default function ContentSection() {
               <div className={styles.committeeSection}>
                 <h3>I. BAN CHỈ ĐẠO</h3>
                 <p><strong>GS.TS. Nguyễn Thanh Thủy</strong><br/>Chủ tịch FISU Việt Nam - Trưởng Ban</p>
-                <p><strong>PGS.TS. Đặng Hoài Bắc</strong><br/>Giám đốc Học viện - Đồng Trưởng ban</p>
+                <p><strong>PGS.TS. Đặng Hoài Bắc</strong><br/>Giám đốc Học viện CNBCVT - Đồng Trưởng ban</p>
                 <p><strong>Ông Trần Đức Lai</strong><br/>Chủ tịch Hội Vô tuyến Điện tử Việt Nam</p>
                 <p><strong>Ông Nguyễn Khắc Lịch</strong><br/>Cục trưởng Cục Công nghiệp Công nghệ Thông tin, Bộ Khoa học và Công nghệ</p>
                 <p><strong>Ông Nguyễn Phong Nhã</strong><br/>Phó Cục trưởng Cục Viễn thông, Bộ Khoa học và Công nghệ</p>
-                <p><strong>GS.TS. Từ Minh Phương</strong><br/>Phó Giám đốc Học viện</p>
+                <p><strong>GS.TS. Từ Minh Phương</strong><br/>Phó Giám đốc Học viện CNBCVT</p>
               </div>
 
               <div className={styles.committeeSection}>
                 <h3>II. BAN TỔ CHỨC</h3>
-                <p><strong>TS. Nguyễn Trung Kiên</strong><br/>Phó Giám đốc Học viện - Trưởng Ban</p>
-                <p><strong>PGS.TS. Ngô Quốc Dũng (PTIT)</strong><br/>Phó trưởng Ban</p>
+                <p><strong>TS. Nguyễn Trung Kiên</strong><br/>Phó Giám đốc Học viện CNBCVT - Trưởng Ban</p>
+                <p><strong>PGS.TS. Ngô Quốc Dũng (RIPT)</strong><br/>Phó trưởng Ban</p>
                 <p><strong>TS. Ngô Đức Thiện (PTIT)</strong><br/>Phó trưởng Ban</p>
                 <p><strong>TS. Đỗ Trung Anh (PTIT)</strong></p>
               </div>
@@ -110,7 +110,7 @@ export default function ContentSection() {
                 <p><strong>PGS.TS. Hoàng Trọng Minh (PTIT)</strong></p>
                 <p><strong>TS. Trần Tiến Công (PTIT)</strong></p>
                 <p><strong>TS. Nguyễn Trung Hiếu (PTIT)</strong></p>
-                <p><strong>PGS.TS. Ngô Quốc Dũng (PTIT)</strong></p>
+                <p><strong>PGS.TS. Ngô Quốc Dũng (RIPT)</strong></p>
               </div>
 
               <div className={styles.committeeSection}>
