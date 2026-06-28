@@ -12,14 +12,14 @@ export default function ContentSection() {
             Trí tuệ nhân tạo (AI) đang trở thành động lực cốt lõi trong cuộc cách mạng công nghiệp lần thứ tư, đặc biệt trong lĩnh vực điện tử và viễn thông. AI mang đến những cơ hội đột phá trong thiết kế mạng thế hệ mới (5G/6G), xử lý tín hiệu thông minh, tự động hóa hạ tầng mạng, bảo mật không gian mạng và phát triển các dịch vụ viễn thông tích hợp. Tuy nhiên, sự hội tụ giữa AI và viễn thông cũng đặt ra không ít thách thức về chuẩn hóa kỹ thuật, bảo mật dữ liệu, độ trễ thời gian thực, tính minh bạch của thuật toán và nhu cầu cấp bách về nguồn nhân lực chất lượng cao.
           </p>
           <p>
-            Học viện Công nghệ Bưu chính Viễn thông – đơn vị đào tạo và nghiên cứu hàng đầu trong lĩnh vực công nghệ thông tin và truyền thông tại Việt Nam – phối hợp cùng Câu lạc bộ Khoa - Trường - Viện Công nghệ Thông tin - Truyền thông Việt Nam (FISU Việt Nam), Hội Vô tuyến Điện tử Việt Nam (REV) và Hội Tin học Việt Nam (VAIP) với sự bảo trợ của Bộ Khoa học và Công nghệ tổ chức Hội thảo Khoa học Quốc gia có ý nghĩa đặc biệt với chủ đề: <strong>"AI & Điện tử Viễn thông: Cơ hội, Thách thức và Hướng đi Tương lai" (AI4TELECOM 2026)</strong>.
+            Học viện Công nghệ Bưu chính Viễn thông – đơn vị đào tạo và nghiên cứu hàng đầu trong lĩnh vực công nghệ thông tin và truyền thông tại Việt Nam – phối hợp cùng Câu lạc bộ Khoa - Trường - Viện Công nghệ Thông tin - Truyền thông Việt Nam (FISU Việt Nam), Hội Vô tuyến Điện tử Việt Nam (REV) và Hội Tin học Việt Nam (VAIP) với sự bảo trợ của Bộ Khoa học và Công nghệ tổ chức Hội thảo Khoa học Quốc gia có ý nghĩa đặc biệt với chủ đề: <strong>&quot;AI & Điện tử Viễn thông: Cơ hội, Thách thức và Hướng đi Tương lai&quot; (AI4TELECOM 2026)</strong>.
           </p>
           <p>
             Hội thảo là diễn đàn để các nhà quản lý, kỹ sư, chuyên gia, nhà nghiên cứu trong lĩnh vực điện tử viễn thông và trí tuệ nhân tạo cùng nhau trao đổi, thảo luận về những vấn đề cốt lõi.
           </p>
 
           <h2 className={styles.sectionTitle}>
-            CƠ CẤU TỔ CHỨC
+            BAN TỔ CHỨC
           </h2>
 
           <div className={styles.twoColumnText}>

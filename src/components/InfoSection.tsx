@@ -13,7 +13,11 @@ export default function InfoSection() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
     // 0h ngày 10-9-2026. Month is 0-indexed, so 8 is September.
     const targetDate = new Date(2026, 8, 10, 0, 0, 0).getTime();
 

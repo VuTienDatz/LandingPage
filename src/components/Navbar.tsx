@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className={styles.navLink}>Home</div>
         <div className={styles.navLink}>Call for Papers</div>
         <div className={styles.navLink}>Sponsor and Exhibition</div>
-        <div className={`${styles.navLink} ${styles.active}`}>What's news</div>
+        <div className={`${styles.navLink} ${styles.active}`}>What&apos;s news</div>
         <div className={styles.navLink}>Committees</div>
         <div className={styles.navLink}>Keynotes</div>
         <div className={styles.navLink}>Tutorials</div>
