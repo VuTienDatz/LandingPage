@@ -1,166 +1,186 @@
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .hero {
   position: relative;
   display: flex;
-  min-height: 400px;
-  background-color: var(--ptit-dark);
+  min-height: 450px;
+  background-color: #ffffff; /* Base white for the right side */
   overflow: hidden;
 }
 
-.heroLeft {
-  flex: 0 0 40%;
-  position: relative;
-  background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
-  background-size: cover;
-  background-position: center;
-}
-
-.heroLeftLogo {
+/* The fog overlay: placed over the right edge of the image to fade it to white */
+.heroOverlay {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  color: var(--ptit-red);
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  font-size: 4rem;
-  line-height: 1;
-}
-
-.yearText {
-  display: block;
-  font-size: 0.8rem;
-  color: #000;
-  line-height: 1.2;
-}
-
-.anniversaryText {
-  display: block;
-  font-size: 0.8rem;
-  color: #000;
-  line-height: 1.2;
-}
-
-.ieeeText {
-  display: block;
-  font-size: 1.2rem;
-  margin-top: 0.2rem;
-  color: var(--ptit-red);
-}
-
-.curveSvg {
-  position: absolute;
-  left: 38%;
   top: 0;
-  height: 100%;
-  width: auto;
+  left: 30%; /* Start the fade earlier for a smoother transition */
+  width: 30%; /* Covers from 30% to 60% */
+  bottom: 0;
+  /* Fades from transparent to a soft icy blue, then to pure white */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(200, 230, 255, 0.6) 50%, rgba(255, 255, 255, 1) 100%);
+  backdrop-filter: blur(15px); /* Stronger blur for a better fog effect */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 100%);
   z-index: 2;
-  filter: drop-shadow(-5px 0 15px rgba(0,0,0,0.5));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  /* Removed max-width to allow full bleed to the right edge */
+  justify-content: flex-end; /* Pushes content to the right edge */
+  padding-right: 2%; /* Keep a small distance from the absolute edge */
+}
+
+.heroLeft {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 60%; /* Image stops exactly where the fog becomes solid white */
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center; /* Center to show the whole image evenly */
+  z-index: 1;
 }
 
 .heroRight {
-  flex: 1;
-  position: relative;
-  background-color: var(--ptit-dark);
-  background-image: radial-gradient(circle at center, var(--ptit-dark-light) 0%, var(--ptit-dark) 100%);
-  padding: 3rem 4rem;
+  width: auto; /* Let it expand naturally */
+  min-width: 650px; /* Prevent wrapping of the red block */
+  max-width: 800px;
+  margin-left: auto; /* Force it to the absolute right edge */
+  padding: 4rem 0 4rem 2rem; /* Remove right padding so it touches the right bound */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 3;
+  align-items: center; /* Align center! */
+  text-align: center; /* Text center! */
 }
 
-.heroRightLogo {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logoNumber {
-  font-size: 3rem;
-  font-weight: 900;
-  font-style: italic;
-}
-
-.logoTextCol {
+.sponsorsWrapper {
   display: flex;
   flex-direction: column;
-  font-size: 0.6rem;
-  text-align: left;
-  line-height: 1;
+  align-items: center; /* Align center */
+  margin-bottom: 2.5rem;
 }
 
-.logoYears {
-  display: flex;
-  gap: 0.2rem;
-}
-
-.logoHust {
+.sponsorsTitle {
   font-size: 1rem;
-  font-style: italic;
-}
-
-/* Removed gradient from the main text */
-.heroTitleSolid {
-  font-size: 3.5rem;
-  font-style: italic;
+  color: var(--ptit-dark);
   font-weight: 800;
-  color: var(--ptit-red); /* Solid PTIT red */
-  margin-bottom: 1.5rem;
-  letter-spacing: 2px;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-.heroTitleMain {
-  font-size: 2.2rem;
-  color: #fff;
-  line-height: 1.3;
-  margin-bottom: 3rem;
-  max-width: 800px;
-}
-
-/* Make buttons slightly overlap or close to each other */
-.heroButtons {
+.heroRightLogosGroup {
   display: flex;
   gap: 1.5rem;
-  position: relative;
-  z-index: 10;
+  align-items: center;
+}
+
+.topLogo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.redBlock {
+  background-color: var(--ptit-red);
+  color: #fff;
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+  align-self: center; /* Center it */
+}
+
+.subTitle {
+  color: var(--ptit-red);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mainTitle {
+  color: var(--ptit-dark);
+  font-size: 1.7rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  max-width: 650px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center; /* Buttons center aligned */
 }
 
 .heroPill {
-  background: var(--ptit-red);
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  border-radius: 50px;
+  background: #ffffff;
+  color: var(--ptit-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
   font-size: 1.1rem;
-  font-weight: 600;
-  border: none;
-  transition: all 0.2s;
-  position: relative;
-  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+  font-weight: 700;
+  border-radius: 50px;
+  border: 1px solid rgba(11, 58, 96, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .heroPill:hover {
-  background: var(--ptit-red-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6);
+  transform: translateY(-4px);
+  background: var(--ptit-dark);
+  color: #ffffff;
+  box-shadow: 0 12px 25px rgba(11, 58, 96, 0.25);
+  border-color: transparent;
+}
+
+.btnIcon {
+  width: 28px;
+  height: 28px;
 }
 
 @media (max-width: 1100px) {
-  .hero {
+  .heroContent {
     flex-direction: column;
   }
-  .heroLeft {
-    height: 300px;
+  .heroOverlay {
+    width: 100%;
+    clip-path: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+    background: rgba(255, 255, 255, 0.9);
   }
-  .curveSvg {
+  .heroLeft {
     display: none;
+  }
+  .heroRight {
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .sponsorsWrapper, .redBlock {
+    align-self: center;
+    align-items: center;
+  }
+  .heroButtons {
+    justify-content: center;
   }
 }

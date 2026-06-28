@@ -3,43 +3,62 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.heroLeft}>
-        <div className={styles.heroLeftLogo}>
-          20
-          <span className={styles.yearText}>YEAR</span>
-          <span className={styles.anniversaryText}>ANNIVERSARY</span>
-          <span className={styles.ieeeText}>IEEE ICCE</span>
-        </div>
-      </div>
-      
-      {/* SVG Curve Separator */}
-      {/* SVG Curve Separator */}
-      <svg className={styles.curveSvg} viewBox="0 0 100 800" preserveAspectRatio="none">
-        <path d="M0 0 C 100 200, -50 600, 100 800 L 100 0 Z" fill="var(--ptit-dark-light)" />
-        <path d="M10 0 C 110 200, -40 600, 110 800 L 110 0 Z" fill="var(--ptit-dark)" />
-      </svg>
-
-      <div className={styles.heroRight}>
-        <div className={styles.heroRightLogo}>
-          <span className={styles.logoNumber}>70</span>
-          <div className={styles.logoTextCol}>
-            <div className={styles.logoYears}>
-              <span>1956</span>
-              <span>2026</span>
-            </div>
-            <strong className={styles.logoHust}>HUST</strong>
-          </div>
-        </div>
-
-        {/* Removed text gradient, using solid color */}
-        <h1 className={styles.heroTitleSolid}>IEEE ICCE 2026</h1>
-        <h2 className={styles.heroTitleMain}>THE 11th IEEE INTERNATIONAL CONFERENCE ON COMMUNICATIONS AND ELECTRONICS 2026</h2>
+    <section className={styles.heroWrapper}>
+      <div className={styles.hero}>
         
-        {/* Overlapping/Grouped Buttons */}
-        <div className={styles.heroButtons}>
-          <div className={styles.heroPill}>29 - 31/7/2026</div>
-          <div className={styles.heroPill}>Nha Trang, Vietnam</div>
+        {/* Background Image (Left 60%) */}
+        <div className={styles.heroLeft}></div>
+
+        {/* Fog Overlay (30% to 60%, sitting on top of heroLeft) */}
+        <div className={styles.heroOverlay}></div>
+
+        <div className={styles.heroContent}>
+          {/* Right Side: Information */}
+          <div className={styles.heroRight}>
+            
+            {/* 1. Đơn vị phối hợp tổ chức (Sponsors first) */}
+            <div className={styles.sponsorsWrapper}>
+              <p className={styles.sponsorsTitle}>ĐƠN VỊ PHỐI HỢP TỔ CHỨC</p>
+              <div className={styles.heroRightLogosGroup}>
+                <img src="/ptit.png" alt="PTIT Logo" className={styles.topLogo} />
+                <img src="/ict.png" alt="ICT FISU Logo" className={styles.topLogo} />
+                <img src="/ript.png" alt="RIPT Logo" className={styles.topLogo} />
+              </div>
+            </div>
+
+            {/* 2. AI4TELECOM */}
+            <div className={styles.redBlock}>
+              AI4TELECOM 2026
+            </div>
+            
+            {/* 3. Các chữ tiếp theo (Titles) */}
+            <h3 className={styles.subTitle}>HỘI THẢO KHOA HỌC QUỐC GIA</h3>
+            <h2 className={styles.mainTitle}>
+              AI & ĐIỆN TỬ VIỄN THÔNG:<br />
+              CƠ HỘI, THÁCH THỨC VÀ HƯỚNG ĐI TƯƠNG LAI
+            </h2>
+            
+            {/* 4. Hai nút thời gian địa điểm (Buttons at the bottom) */}
+            <div className={styles.heroButtons}>
+              <div className={styles.heroPill}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.btnIcon}>
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                10/09/2026
+              </div>
+              <div className={styles.heroPill}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.btnIcon}>
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Hà Nội, Việt Nam
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

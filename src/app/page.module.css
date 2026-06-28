@@ -167,21 +167,23 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Info Section (Dark Blue) */
+/* Info Section (Light Blue) */
 .topSection {
-  background-color: var(--ptit-dark); /* PTIT dark background */
-  color: var(--text-light);
-  padding: 3rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e1f0fa 50%, #f8fafc 100%); /* Gentle, beautiful light background */
+  background-size: cover;
+  background-position: center;
+  color: var(--ptit-dark);
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   width: 100%;
 }
 
 .topContainer {
-  max-width: 1200px;
+  max-width: 1400px; /* Increased from 1200px to make content wider */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr;
-  gap: 2rem;
+  grid-template-columns: 1.5fr 1fr 1.2fr; /* Give more width to countdown column! */
+  gap: 3rem;
   width: 100%;
 }
 
@@ -193,8 +195,8 @@
 }
 
 .countdownTitle {
-  color: #fff;
-  font-size: 1.1rem;
+  color: var(--ptit-dark);
+  font-size: 1.5rem; /* Increased from 1.1rem */
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
@@ -214,11 +216,20 @@
   display: flex;
   flex-direction: column;
   flex: 1; /* Equal width for all items */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.countItem:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .countNumber {
-  background-color: var(--ptit-dark-light); /* Navy for hours, mins, secs */
-  color: #fff;
+  background-color: #fff;
+  color: var(--ptit-dark);
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -236,49 +247,96 @@
 
 /* PTIT Red for Days */
 .countItem.days .countNumber {
-  background-color: var(--ptit-red);
+  background-color: #fff;
+  color: var(--ptit-red);
 }
 .countItem.days .countLabel {
-  background-color: var(--ptit-red-dark);
+  background-color: var(--ptit-red);
 }
 
 .conferenceCard {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff; /* Reverted to white */
+  color: var(--text-main);
   padding: 1.5rem;
-  border-radius: 4px;
-  text-align: left; /* Left align for consistency */
+  border-radius: 8px;
+  text-align: left;
   width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color); /* Reverted border */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.conferenceCard h3 {
-  font-size: 1.25rem;
+.conferenceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.15); /* Soft blue shadow */
+}
+
+.submissionCard {
+  background-color: #ffffff;
+  color: var(--text-main);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.submissionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  color: var(--ptit-dark);
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.conferenceCard p {
-  font-size: 0.85rem;
-  color: #333;
-  line-height: 1.4;
+.cardHeader {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ptit-red);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.cardTextDate {
+  font-size: 1rem;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.cardTextLocation {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.cardText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.cardText strong {
+  color: var(--ptit-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.highlight {
+  color: var(--ptit-red);
+  font-weight: 700;
 }
 
 /* Column 2: Submission */
 .submissionCol {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.submissionCol h3 {
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.submissionCol p {
-  font-size: 0.9rem;
-  color: #cbd5e1;
+  align-items: stretch;
 }
 
 /* Column 3: Important Dates */
@@ -288,17 +346,24 @@
 }
 
 .datesTitle {
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  color: var(--ptit-dark);
+  font-size: 1.5rem; /* Increased from 1.1rem */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .dateList {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.countdownRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem; /* Reduced gap to prevent squishing */
 }
 
 .dateRow {
@@ -309,18 +374,31 @@
 
 .datePill {
   background-color: var(--ptit-dark-light);
-  color: #fff;
-  padding: 0.4rem 1rem;
+  color: var(--ptit-dark);
+  padding: 0.6rem 1rem;
   border-radius: 4px;
-  font-size: 0.85rem;
-  width: 180px;
+  font-size: 1.1rem;
+  width: 220px;
+  min-width: 220px; /* Enforce strict width */
+  max-width: 220px; /* Enforce strict width */
+  flex-shrink: 0; /* Prevent shrinking */
+  box-sizing: border-box;
   text-align: center;
   font-weight: 600;
+  border: 1px solid rgba(11, 58, 96, 0.2);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.dateRow:hover .datePill {
+  transform: translateX(5px);
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
 }
 
 .dateLabel {
-  font-size: 0.85rem;
-  color: #fff;
+  font-size: 1.15rem; /* Increased from 0.85rem */
+  color: var(--ptit-dark);
+  font-weight: 500;
 }
 
 /* Urgent / Red Date */
@@ -339,7 +417,7 @@
 }
 
 .contentContainer {
-  max-width: 1200px;
+  max-width: 1400px; /* Increased from 1200px */
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -450,17 +528,133 @@
   text-align: center;
 }
 
-/* Footer Section */
-.footer {
+.countNumber {
+  font-size: 2.8rem; /* Restore to larger size since container is wider */
+  font-weight: 800;
+  color: var(--ptit-dark);
+  background-color: #ffffff;
+  padding: 1.2rem 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.countLabel {
+  font-size: 1rem; /* Restore to normal readable size */
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ffffff;
   background-color: var(--ptit-dark);
-  color: #fff;
-  padding: 4rem 2rem;
-  margin-top: auto;
+  padding: 0.6rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* 2-Column Text Layout for Main Content */
+.twoColumnText {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.committeeSection {
+  margin-bottom: 2rem;
+}
+
+.committeeSection h3 {
+  font-size: 1.3rem; /* Increased from 1.15rem */
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.committeeSection p {
+  font-size: 1.15rem; /* Increased from 1.05rem */
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* Sidebar Sponsor Categories */
+.sponsorCategory {
+  margin-bottom: 2rem;
   width: 100%;
 }
 
+.categoryTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.4rem; /* Massively increased to stand out */
+  color: #000;
+  font-weight: 400; /* Removed bold styling */
+  text-transform: uppercase;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.categoryIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #0ea5e9;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+.categoryLogos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.categoryLogos img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 0.9rem; /* Slightly larger */
+  color: #000;
+  max-width: 180px;
+  font-weight: 800; /* Made bold as requested */
+  line-height: 1.5;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1e2229; /* Dark slate background matching image */
+  background-image: url('/continents.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  margin-top: auto;
+  width: 100%;
+  position: relative;
+  /* Removed red border top */
+}
+
 .footerContainer {
-  max-width: 1200px;
+  max-width: 1400px; /* Increased from 1200px */
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -468,22 +662,33 @@
   width: 100%;
 }
 
+.article p {
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem; /* Increased size for readability */
+  line-height: 1.8;
+  color: #000;
+}
+
 .footerTitle {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .footerSubtitle {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: #ef4444; /* Bright red */
   text-transform: uppercase;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .footerText {
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #cbd5e1; /* Light gray text for dark theme */
+  margin-bottom: 0.5rem;
 }
 
 
@@ -494,7 +699,7 @@
 }
 
 .footerCopyright {
-  max-width: 1200px;
+  max-width: 1400px; /* Increased from 1200px */
   margin: 3rem auto 0;
   font-size: 0.8rem;
   color: #94a3b8;

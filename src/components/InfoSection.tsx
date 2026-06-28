@@ -14,7 +14,8 @@ export default function InfoSection() {
 
   useEffect(() => {
     setIsMounted(true);
-    const targetDate = new Date("July 29, 2026 00:00:00").getTime();
+    // 0h ngày 10-9-2026. Month is 0-indexed, so 8 is September.
+    const targetDate = new Date(2026, 8, 10, 0, 0, 0).getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -74,16 +75,23 @@ export default function InfoSection() {
           </div>
           
           <div className={styles.conferenceCard}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'bold'}}>IEEE ICCE 2026</h3>
-            <p style={{marginBottom: '0.5rem', color: '#333'}}>July 29th-31st, 2026</p>
-            <p style={{color: '#555'}}>Sheraton Nha Trang Hotel & Spa, Nha Trang City,<br/>Khanh Hoa Province, Vietnam</p>
+            <h3 className={styles.cardTitle}>AI4TELECOM 2026</h3>
+            <p className={styles.cardTextDate}>10/09/2026</p>
+            <p className={styles.cardTextLocation}>Hà Nội, Việt Nam</p>
           </div>
         </div>
 
         {/* Column 2: Submission */}
         <div className={styles.submissionCol}>
-          <h3 style={{fontSize: '1.1rem', marginBottom: '1rem'}}>IEEE ICCE 2026</h3>
-          <p style={{fontSize: '1.5rem', fontWeight: 'bold', color: '#fff', letterSpacing: '2px'}}>SUBMISSION</p>
+          <div className={styles.submissionCard}>
+            <h3 className={styles.cardTitle}>AI4TELECOM 2026</h3>
+            <p className={styles.cardHeader}>SUBMISSION</p>
+            <p className={styles.cardText}>
+              Gửi bài thông qua địa chỉ Email:<br/>
+              <strong>ript@ptit.edu.vn</strong><br/>
+              trước ngày <span className={styles.highlight}>31/08/2026</span>
+            </p>
+          </div>
         </div>
 
         {/* Column 3: Important Dates */}
@@ -91,24 +99,20 @@ export default function InfoSection() {
           <div className={styles.datesTitle}>IMPORTANT DATES</div>
           <div className={styles.dateList}>
             <div className={`${styles.dateRow} ${styles.urgent}`}>
-              <div className={styles.datePill} style={{color: 'var(--ptit-red)'}}>March 15th, 2026</div>
-              <div className={styles.dateLabel}>Extended Submission Deadline</div>
+              <div className={styles.datePill}>31/08/2026</div>
+              <div className={styles.dateLabel}>Hạn cuối nhận bài</div>
             </div>
             <div className={styles.dateRow}>
-              <div className={styles.datePill}>May 24th, 2026</div>
-              <div className={styles.dateLabel}>Acceptance Notification</div>
+              <div className={styles.datePill}>--/--/2026</div>
+              <div className={styles.dateLabel}>Thông báo kết quả</div>
             </div>
             <div className={styles.dateRow}>
-              <div className={styles.datePill}>June 05th, 2026</div>
-              <div className={styles.dateLabel}>Camera Ready</div>
+              <div className={styles.datePill}>--/--/2026</div>
+              <div className={styles.dateLabel}>Gửi bài bản cuối</div>
             </div>
             <div className={styles.dateRow}>
-              <div className={styles.datePill}>June 12th, 2026</div>
-              <div className={styles.dateLabel}>Registration Deadline</div>
-            </div>
-            <div className={styles.dateRow}>
-              <div className={styles.datePill}>July 29th-31st, 2026</div>
-              <div className={styles.dateLabel}>Conference Date</div>
+              <div className={styles.datePill}>10/09/2026</div>
+              <div className={styles.dateLabel}>Khai mạc hội thảo</div>
             </div>
           </div>
         </div>
