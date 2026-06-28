@@ -171,8 +171,9 @@
 .topSection {
   background-color: var(--ptit-dark); /* PTIT dark background */
   color: var(--text-light);
-  padding: 2rem 2rem 3rem;
+  padding: 3rem 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 .topContainer {
@@ -181,33 +182,38 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr;
   gap: 2rem;
+  width: 100%;
 }
 
 /* Column 1: Countdown */
 .countdownCol {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch; /* Stretch children to have equal width */
 }
 
 .countdownTitle {
   color: #fff;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
 }
 
 .countdownBox {
   display: flex;
   gap: 4px;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .countItem {
   display: flex;
   flex-direction: column;
-  width: 70px;
+  flex: 1; /* Equal width for all items */
 }
 
 .countNumber {
@@ -241,7 +247,7 @@
   color: #000;
   padding: 1.5rem;
   border-radius: 4px;
-  text-align: center;
+  text-align: left; /* Left align for consistency */
   width: 100%;
 }
 
@@ -260,8 +266,8 @@
 .submissionCol {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .submissionCol h3 {
@@ -329,11 +335,16 @@
 .contentSection {
   background-color: var(--primary-bg);
   padding: 3rem 2rem;
+  width: 100%;
+}
+
+.contentContainer {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
+  width: 100%;
 }
 
 .article {
@@ -443,8 +454,9 @@
 .footer {
   background-color: var(--ptit-dark);
   color: #fff;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   margin-top: auto;
+  width: 100%;
 }
 
 .footerContainer {
@@ -453,6 +465,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  width: 100%;
 }
 
 .footerTitle {
@@ -472,6 +485,7 @@
   font-size: 0.9rem;
   margin-bottom: 0.25rem;
 }
+
 
 .contactTitle {
   font-size: 1.5rem;
